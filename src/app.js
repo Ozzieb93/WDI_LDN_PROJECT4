@@ -15,6 +15,7 @@ class App extends React.Component {
     return (
       <Router>
         <main>
+          {/* <Navbar /> */}
           <section className="section">
             <div className="container">
               <Switch>
@@ -26,7 +27,6 @@ class App extends React.Component {
           </section>
         </main>
       </Router>
-
     );
   }
 }
