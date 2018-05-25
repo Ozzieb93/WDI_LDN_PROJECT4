@@ -7,9 +7,9 @@ const userSchema = new mongoose.Schema({
   surname: { type: String, required: true},
   email: { type: String, required: true},
   password: { type: String, required: true},
-  bio: { type: String, required: true},
+  bio: { type: String },
   image: { type: String, default: '../../assets/images/default-user.png' },
-  userType: {type: String, required: true ['Landlord', 'Tenant']}
+  userType: {type: String ['Landlord', 'Tenant']} /* <-- this may be incorrect */
 });
 
 userSchema.set('toJSON', {

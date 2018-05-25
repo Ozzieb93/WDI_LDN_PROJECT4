@@ -4,11 +4,8 @@ mongoose.Promise = require('bluebird');
 const propertySchema = new mongoose.Schema({
   address: { type: String, required: true},
   tenants: { type: Number, required: true},
-  image: { type: String }
+  image: { type: String },
+  createdBy: { type: mongoose.Schema.ObjectId, ref: 'User'}
 });
 
 module.exports = mongoose.model('Property', propertySchema);
-
-const jobsSchema = new mongoose.Schema({
-  
-})
