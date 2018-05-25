@@ -16,7 +16,16 @@ router.route('/jobs/:id')
   .put( jobs.update)
   .delete( jobs.delete);
 
-// PROPERTIES ROUTE
+// USERS ROUTE
+
+router.route('/users')
+  .get(users.index);
+
+router.route('/users/:id')
+  .get(users.show)
+  .put( users.update)
+  .delete( users.delete);
+
 
 router.route('/properties')
   .get(properties.index)
@@ -27,16 +36,7 @@ router.route('/properties/:id')
   .put( properties.update)
   .delete( properties.delete);
 
-// USERS ROUTE
 
-router.route('/users')
-  .get(users.index)
-  .post( users.create);
-
-router.route('/users/:id')
-  .get(users.show)
-  .put( users.update)
-  .delete( users.delete);
 
 router.post('/register', auth.register);
 router.post('/login', auth.login);
