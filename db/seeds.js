@@ -5,7 +5,7 @@ const Job = require('../models/Job');
 const Property = require('../models/property');
 
 mongoose.connect(dbURI, (err, db) => {
-  db.dropdatabe();
+  db.dropDatabase();
 
   Job.create([{
     description: 'I have a burst water main',
@@ -26,6 +26,7 @@ mongoose.connect(dbURI, (err, db) => {
       tenants: 7,
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTsF52cBB_D0Dvga_JyFkK447NbSeHMzr2m7vrrE8yBMfvW0fILQ'
     }])
+    .then(properties => console.log(`${properties.length} properties created`))
     .catch(err => console.log(err))
     .finally(() => mongoose.connection.close());
 });

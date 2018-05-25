@@ -8,7 +8,7 @@ function register(req, res, next) {
 
       const token = jwt.sign({ sub: user._id }, secret, { expiresIn: '6h' });
       res.json({
-        message: `Thanks for registering ${user.username}!`,
+        message: `Thanks for registering ${user.firstname}!`,
         token,
         user
       });
@@ -27,7 +27,7 @@ function login(req, res, next) {
 
       const token = jwt.sign({ sub: user._id }, secret, { expiresIn: '6h' }); /* user._id is the payload and the expiresIn is the signature */
       res.json({
-        message: `Welcome back ${user.username}!`,
+        message: `Welcome back ${user.firstname}!`,
         token,
         user
       });
