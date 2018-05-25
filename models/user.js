@@ -8,7 +8,8 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true},
   password: { type: String, required: true},
   bio: { type: String, required: true},
-  image: { type: String, default: '../../assets/images/default-user.png' }
+  image: { type: String, default: '../../assets/images/default-user.png' },
+  userType: {type: String, required: true ['Landlord', 'Tenant']}
 });
 
 userSchema.set('toJSON', {
