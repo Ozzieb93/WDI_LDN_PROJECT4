@@ -8,3 +8,7 @@ const propertySchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Property', propertySchema);
+
+const jobsSchema = new mongoose.Schema({
+  
+})
