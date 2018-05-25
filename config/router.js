@@ -19,12 +19,12 @@ router.route('/jobs/:id')
 
 router.route('/properties')
   .get(properties.index)
-  .post( properties.create);
+  .post(properties.create);
 
 router.route('/properties/:id')
   .get(properties.show)
-  .put( properties.update)
-  .delete( properties.delete);
+  .put(properties.update)
+  .delete(properties.delete);
 
 router.post('/register', auth.register);
 router.post('/login', auth.login);
