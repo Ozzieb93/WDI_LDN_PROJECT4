@@ -14,7 +14,7 @@ class AuthRegister extends React.Component {
     axios
       .post('/api/register', this.state)
       .then(res => Auth.setToken(res.data.token))
-      .then(() => this.props.history.push('/burgers'));
+      .then(() => this.props.history.push('/user'));
   }
 
   render() {
