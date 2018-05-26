@@ -7,9 +7,10 @@ class Navbar extends React.Component {
   render() {
     return (
       <nav className="navbar" role="navigation" aria-label="main navigation">
+
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/1200px-Starbucks_Corporation_Logo_2011.svg.png" width="30" />
+            <p> 🏚 </p>
           </Link>
           <a role="button" className="navbar-burger">
             <span aria-hidden="true"></span>

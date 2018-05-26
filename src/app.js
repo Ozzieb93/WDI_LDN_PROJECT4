@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Profile from './components/profile/Profile';
 import NotFound from './components/common/NotFound';
+import Navbar from './components/common/Navbar';
 
 // Styling
 import './scss/style.scss';
@@ -15,7 +16,7 @@ class App extends React.Component {
     return (
       <Router>
         <main>
-          {/* <Navbar /> */}
+          <Navbar />
           <section className="section">
             <div className="container">
               <Switch>
