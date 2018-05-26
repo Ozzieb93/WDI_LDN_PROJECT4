@@ -22,9 +22,25 @@ class AuthRegister extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <div className="field">
           <input
+            className="select"
+            name="userType"
+            placeholder="Tenant or Landlord"
+            onChange={this.handleChange}
+          />
+        </div>
+        <div className="field">
+          <input
             className="input"
-            name="username"
-            placeholder="Username"
+            name="firstname"
+            placeholder="First Name - r"
+            onChange={this.handleChange}
+          />
+        </div>
+        <div className="field">
+          <input
+            className="input"
+            name="surname"
+            placeholder="Surname"
             onChange={this.handleChange}
           />
         </div>
@@ -32,7 +48,7 @@ class AuthRegister extends React.Component {
           <input
             className="input"
             name="email"
-            placeholder="Email"
+            placeholder="Email - r"
             onChange={this.handleChange}
           />
         </div>
@@ -41,7 +57,7 @@ class AuthRegister extends React.Component {
             className="input"
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder="Password - r"
             onChange={this.handleChange}
           />
         </div>
@@ -50,7 +66,15 @@ class AuthRegister extends React.Component {
             className="input"
             type="password"
             name="passwordConfirmation"
-            placeholder="Password Confirmation"
+            placeholder="Password Confirmation - r"
+            onChange={this.handleChange}
+          />
+        </div>
+        <div className="field">
+          <input
+            className="textarea"
+            name="description"
+            placeholder="About me"
             onChange={this.handleChange}
           />
         </div>
