@@ -7,5 +7,4 @@ const jobSchema = new mongoose.Schema({
   createdBy: { type: mongoose.Schema.ObjectId, ref: 'User'}
 });
 
-
 module.exports = mongoose.model('Job', jobSchema);
