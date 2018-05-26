@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
   userType: {type: String, required: true}, /* This will be the user type i.e the landlord or the property */
   firstname: { type: String, required: true},
   surname: { type: String},
-  email: { type: String},
+  email: { type: String, require: true, unique: true},
   password: { type: String, required: true},
   bio: { type: String },
   image: { type: String, default: '../../assets/images/default-user.png' }
