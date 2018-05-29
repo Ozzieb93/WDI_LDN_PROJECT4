@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import AuthLogin from './components/auth/Login';
 import RegisterLogin from './components/auth/Register';
 
-import Profile from './components/profile/Profile';
+import TenantProfile from './components/profile/TenantProfile';
 
 import NotFound from './components/common/NotFound';
 import Navbar from './components/common/Navbar';
@@ -25,7 +25,7 @@ class App extends React.Component {
           <section className="section">
             <div className="container">
               <Switch>
-                <Route exact path="/user" component={Profile} />
+                <Route exact path="/user" component={TenantProfile} />
                 <Route exact path="/login" component={AuthLogin} />
                 <Route exact path="/register" component= {RegisterLogin} />
                 <Route exact path="/" component={Home} />

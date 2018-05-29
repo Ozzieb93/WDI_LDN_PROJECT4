@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Profile = () => {
+const TenantProfile = () => {
   return (
     <div>
       <h1>Profile</h1>
@@ -8,6 +8,6 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default TenantProfile;
 
 // Should this be a classical or functional component?
