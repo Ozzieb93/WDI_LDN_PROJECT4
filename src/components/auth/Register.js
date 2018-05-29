@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Auth from '../../lib/auth';
+import Auth from '../../lib/Auth';
 
 class AuthRegister extends React.Component {
   state = {};
@@ -14,33 +14,25 @@ class AuthRegister extends React.Component {
     axios
       .post('/api/register', this.state)
       .then(res => Auth.setToken(res.data.token))
-      .then(() => this.props.history.push('/user'));
+      .then(() => this.props.history.push(`/api/users/${Auth.getPayload().sub}`));
   }
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <div className="field">
+        {/* <div className="field">
           <input
             className="select"
             name="userType"
             placeholder="Tenant or Landlord"
             onChange={this.handleChange}
           />
-        </div>
+        </div> */}
         <div className="field">
           <input
             className="input"
-            name="firstname"
-            placeholder="First Name - r"
-            onChange={this.handleChange}
-          />
-        </div>
-        <div className="field">
-          <input
-            className="input"
-            name="surname"
-            placeholder="Surname"
+            name="name"
+            placeholder="Name"
             onChange={this.handleChange}
           />
         </div>
@@ -48,7 +40,7 @@ class AuthRegister extends React.Component {
           <input
             className="input"
             name="email"
-            placeholder="Email - r"
+            placeholder="Email"
             onChange={this.handleChange}
           />
         </div>
@@ -57,7 +49,7 @@ class AuthRegister extends React.Component {
             className="input"
             type="password"
             name="password"
-            placeholder="Password - r"
+            placeholder="Password"
             onChange={this.handleChange}
           />
         </div>
@@ -66,7 +58,7 @@ class AuthRegister extends React.Component {
             className="input"
             type="password"
             name="passwordConfirmation"
-            placeholder="Password Confirmation - r"
+            placeholder="Password Confirmation"
             onChange={this.handleChange}
           />
         </div>
@@ -75,6 +67,22 @@ class AuthRegister extends React.Component {
             className="textarea"
             name="description"
             placeholder="About me"
+            onChange={this.handleChange}
+          />
+        </div>
+        <div className="field">
+          <input
+            className="input"
+            name="address"
+            placeholder="address"
+            onChange={this.handleChange}
+          />
+        </div>
+        <div className="field">
+          <input
+            className="input"
+            name="image"
+            placeholder="image"
             onChange={this.handleChange}
           />
         </div>

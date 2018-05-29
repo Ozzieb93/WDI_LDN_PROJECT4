@@ -11,6 +11,7 @@ function usersIndex(req, res, next){
 function usersShow(req, res, next){
   User
     .findById(req.params.id)
+    .populate('')
     .exec()
     .then(user => {
       if(!user) return res.sendStatus(404);

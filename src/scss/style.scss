@@ -1,3 +1,33 @@
 @import '~bulma';
 
 @import 'components/notFound';
+
+.card-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+}
+
+.price {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.hero-image {
+  border: 1px solid red;
+  height: 400px;
+}
+
+.button {
+  margin: 3px;
+}
+
+.map {
+  height: 260px;
+  margin-bottom:  22px;
+
+  &.burger-index {
+    height: 75vh;
+  }
+}
