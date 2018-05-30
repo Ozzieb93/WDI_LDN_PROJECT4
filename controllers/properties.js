@@ -11,6 +11,7 @@ function indexRoute(req, res, next) {
 function showRoute(req, res, next) {
   Property
     .findById(req.params.id)
+    .populate('tenants')
     .exec()
     .then(property => {
       if(!property) return res.sendStatus(404);

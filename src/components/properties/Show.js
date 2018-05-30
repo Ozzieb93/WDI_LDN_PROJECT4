@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import Auth from '../../lib/Auth';
-import { Link } from 'react-router-dom';
+// import Auth from '../../lib/Auth';
+// import { Link } from 'react-router-dom';
 
 class Show extends React.Component {
 
@@ -16,21 +16,34 @@ class Show extends React.Component {
 
     render() {
       const { property } = this.state;
-      console.log(property);
+      console.log(property.tenants);
       return(
         <section>
           <h1 className="title is-1">{property.address}</h1>
-          <div className="columns">
-            <div className="column">
-
-              <div className="hero-image" style={{ backgroundImage: `url(${ property.image })` }} />
-            </div>
-            <div className="column">
-              <h1 className="title is-1"></h1>
-              <h5 className="subtitle is-5">Number of Tenants: {property.tenants}</h5>
-              <h5 className="subtitle is-5"> </h5>
-            </div>
+          {/* <div className="columns"> */}
+          <div className="column">
+            <div className="hero-image" style={{ backgroundImage: `url(${ property.image })` }} />
           </div>
+          {property.tenants &&
+            <div>
+              <h5 className="subtitle is-5">Number of Tenants currently living at the property: {property.tenants.length}</h5>
+              <div className="columns">
+                <div className="column">
+                  <img src={property.tenants[0].image}/>
+                </div>
+                <div className="column">
+                  <h1 className="title is-1">{property.tenants[0].name}</h1>
+                </div>
+                <div className="column">
+                  <h1 className="title is-1">{property.tenants[0].flat}</h1>
+                </div>
+                <div className="column">
+                  <h1 className="title is-1">{property.tenants[0].proffesion}</h1>
+                </div>
+              </div>
+            </div>
+          }
+          {/* </div> */}
           {/* <div>
             <Link
               to={'/properties'}
@@ -49,5 +62,3 @@ class Show extends React.Component {
 }
 
 export default Show;
-
-// Should this be a classical or functional component?

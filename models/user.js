@@ -5,7 +5,9 @@ mongoose.Promise = require('bluebird');
 const userSchema = new mongoose.Schema({
   userType: {type: String}, /* This will be the user type i.e the landlord or the property */
   name: { type: String, required: true},
-  email: { type: String, require: true},
+  email: { type: String, required: true},
+  flat: {type: Number, required: true},
+  proffesion: { type: String, require: true},
   password: { type: String, required: true},
   address: { type: String, required: true},
   description: { type: String },
