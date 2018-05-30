@@ -82,7 +82,7 @@ class AuthRegister extends React.Component {
           <input
             className="input"
             name="image"
-            placeholder="image"
+            placeholder="Profile Picture"
             onChange={this.handleChange}
           />
         </div>

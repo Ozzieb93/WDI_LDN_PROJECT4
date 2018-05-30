@@ -20,7 +20,7 @@ componentWillUpdate() {
 }
 
 componentDidMount() {
-  axios.get(`/api/users/${Auth.getPayload().sub}`)
+  Auth.isAuthenticated() && axios.get(`/api/users/${Auth.getPayload().sub}`)
     .then(res => this.setState({ user: res.data }));
 }
 
@@ -52,7 +52,7 @@ render() {
           {!Auth.isAuthenticated() && <Link to="/register" className="navbar-item">Register</Link>}
           {Auth.isAuthenticated() && <a onClick={this.handleLogout} className="navbar-item">Logout</a>}
           {Auth.isAuthenticated() && <Link to={`/users/${this.state.user._id}`} className="navbar-item">Profile of {this.state.user.name}</Link>}
-          {/* {Auth.isAuthenticated() && <Link to="/properties" className="navbar-item">Properties</Link>} */}
+          {Auth.isAuthenticated() && <Link to={'/properties'} className="navbar-item">Properties of {this.state.user.name}</Link>}
         </div>
       </div>
     </nav>

@@ -19,16 +19,34 @@ mongoose.connect(dbURI, (err, db) => {
 
   User
     .create([{
-      
-
+      image: 'https://www.cj-law.co.uk/wp-content/uploads/2017/06/hugh.jpg',
+      name: 'Joseph',
+      flat: 1,
+      movedIn: '1st Jan, 2018'
+    } ,{
+      image: 'https://www.cj-law.co.uk/wp-content/uploads/2017/06/hugh.jpg',
+      name: 'Joseph',
+      flat: 1,
+      movedIn: '1st Jan, 2018'
+    } ,{
+      image: 'https://www.cj-law.co.uk/wp-content/uploads/2017/06/hugh.jpg',
+      name: 'Joseph',
+      flat: 1,
+      movedIn: '1st Jan, 2018'
     }])
-    .then(jobs => console.log(`${jobs.length} jobs created`));
+    .then(user => console.log(`${user.length} jobs created`));
 
   return Property
     .create([{
       address: '14 West Bank, London, N16 5DG',
       tenants: 4,
-      image: 'https://i.imgur.com/Urseki1.png'
+      image: 'https://i.imgur.com/Urseki1.png',
+      tennats: {
+        image: 'https://www.cj-law.co.uk/wp-content/uploads/2017/06/hugh.jpg',
+        name: 'Joseph',
+        flat: 1,
+        movedIn: '1st Jan, 2018'
+      }
     } ,{
       address: '98 Dynevour Road',
       tenants: 7,

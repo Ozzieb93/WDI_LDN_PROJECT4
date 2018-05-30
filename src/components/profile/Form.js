@@ -1,7 +1,7 @@
 import React from 'react';
-import AutoComplete from '../common/AutoComplete';
+// import AutoComplete from '../common/AutoComplete';
 
-const BurgerForm = ({ handleChange, handleSubmit, handlePlaceChange, user, errors }) => {
+const UserForm = ({ handleChange, handleSubmit, user, errors }) => {
   const formInvalid = Object.keys(errors).some(key => errors[key]);
   return (
     <form onSubmit={handleSubmit}>
@@ -22,7 +22,7 @@ const BurgerForm = ({ handleChange, handleSubmit, handlePlaceChange, user, error
       </div>
       <div className="field">
         <label htmlFor="address">Address</label>
-        <AutoComplete id="address" name="address" className="input" placeholder="Address" handlePlaceChange={handlePlaceChange} />
+        <input id="address" name="address" className="input" placeholder="Address" onChange={handleChange} value={user.address || ''} />
         {errors.address && <small>{errors.address}</small>}
       </div>
       <button disbaled={formInvalid} className="button is-primary">Submit</button>
@@ -30,4 +30,4 @@ const BurgerForm = ({ handleChange, handleSubmit, handlePlaceChange, user, error
   );
 };
 
-export default BurgerForm;
+export default UserForm;

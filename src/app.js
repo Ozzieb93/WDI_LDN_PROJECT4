@@ -18,7 +18,9 @@ import Navbar from './components/common/Navbar';
 import SecureRoute from './components/common/SecureRoute';
 
 // Properties
-import Properties from './components/profile/PropertiesShow';
+import PropertyIndex from './components/properties/Index';
+import PropertyShow from './components/properties/Show';
+
 //New Job
 // import JobNew from './components/job/New';
 
@@ -38,8 +40,8 @@ class App extends React.Component {
               <Switch>
                 <SecureRoute exact path="/users/:id" component={Profile} />
                 <SecureRoute path="/users/:id/edit" component={UsersEdit} />
-                <Route exact path="/properties" component={Properties} />
-                <Route exact path="/properties/:id" component={Properties} />
+                <Route exact path="/properties" component={PropertyIndex} />
+                <Route exact path="/property/:id" component={PropertyShow} />
                 <Route exact path="/login" component={AuthLogin} />
                 <Route exact path="/register" component= {RegisterLogin} />
                 <Route exact path="/" component={Home} />
