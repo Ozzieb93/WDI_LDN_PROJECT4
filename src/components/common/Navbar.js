@@ -8,8 +8,7 @@ class Navbar extends React.Component {
 
   state = {
     navIsOpen: false,
-    user: {},
-    userId: ''
+    user: {}
   }
 
 handleToggle = () => {

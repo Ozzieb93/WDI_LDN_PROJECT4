@@ -3,6 +3,7 @@ mongoose.Promise = require('bluebird');
 const { dbURI } = require('../config/environment');
 const Job = require('../models/job');
 const Property = require('../models/property');
+const User = require('../models/user');
 
 mongoose.connect(dbURI, (err, db) => {
   db.dropDatabase();
@@ -14,6 +15,13 @@ mongoose.connect(dbURI, (err, db) => {
     description: 'Boiler is broken',
     image: 'https://www.vaillant.co.uk/images/ecofit-sustain-2/whbc16-13692-01-890027-format-3-4@570@desktop.jpg'
   }])
+    .then(jobs => console.log(`${jobs.length} jobs created`));
+
+  User
+    .create([{
+      
+
+    }])
     .then(jobs => console.log(`${jobs.length} jobs created`));
 
   return Property
