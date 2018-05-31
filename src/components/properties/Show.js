@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 // import Auth from '../../lib/Auth';
 // import { Link } from 'react-router-dom';
+import Map from '../common/Map';
 
 class Show extends React.Component {
 
@@ -17,48 +18,53 @@ class Show extends React.Component {
     render() {
       const { property } = this.state;
       console.log(property.tenants);
+      console.log(property.location);
       return(
-        <section>
+        <div>
           <h1 className="title is-1">{property.address}</h1>
-          {/* <div className="columns"> */}
-          <div className="column">
-            <div className="hero-image" style={{ backgroundImage: `url(${ property.image })` }} />
+          <div className="columns">
+            <div className="column is-half">
+              <div className="hero-image" style={{ backgroundImage: `url(${ property.image })` }} />
+            </div>
+            <div className="column is-half">
+              {property.location &&
+                <Map className="show-map" center={property.location}/>
+              }
+              <div>
+              </div>
+            </div>
           </div>
           {property.tenants &&
             <div>
               <h5 className="subtitle is-5">Number of Tenants currently living at the property: {property.tenants.length}</h5>
-              <div className="columns">
-                <div className="column">
-                  <img src={property.tenants[0].image}/>
+              {property.tenants.map(tenant =>
+                <div className="columns" key={tenant._id}>
+                  <div className="column">
+                    <img className="user-image" src={tenant.image}/>
+                  </div>
+                  <div className="column">
+                    <h1 className="title is-1">{tenant.name}</h1>
+                  </div>
+                  <div className="column">
+                    <h1 className="title is-1">{tenant.flat}</h1>
+                  </div>
+                  <div className="column">
+                    <h1 className="subtitle is-1">{tenant.movedIn}</h1>
+                  </div>
                 </div>
-                <div className="column">
-                  <h1 className="title is-1">{property.tenants[0].name}</h1>
-                </div>
-                <div className="column">
-                  <h1 className="title is-1">{property.tenants[0].flat}</h1>
-                </div>
-                <div className="column">
-                  <h1 className="title is-1">{property.tenants[0].proffesion}</h1>
-                </div>
-              </div>
+              )}
             </div>
           }
-          {/* </div> */}
-          {/* <div>
-            <Link
-              to={'/properties'}
-              className="button is-success"
-            >Show properties for {user.name}</Link>
-          </div>
-          <div>
-            <Link
-              to={`/users/${user._id}/edit`}
-              className="button is-success"
-            >Edit {user.name} Profile</Link>
-          </div> */}
-        </section>
+        </div>
       );
     }
 }
 
 export default Show;
+//
+{/* <div className="columns">
+
+
+
+
+</div> */}

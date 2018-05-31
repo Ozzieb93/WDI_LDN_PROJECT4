@@ -26,7 +26,7 @@ class PropertyIndex extends  React.Component {
         console.log(property);
 
         return(
-          <section>
+          <div>
             <h1 className="title is-1">{user.name}'s Properties </h1>
             <img src={user.image} />
             <div className="columns">
@@ -52,7 +52,7 @@ class PropertyIndex extends  React.Component {
                 </div>
               </ul>
             </div>
-          </section>
+          </div>
         );
       }
 }

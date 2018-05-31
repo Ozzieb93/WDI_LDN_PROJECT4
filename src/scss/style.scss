@@ -17,6 +17,8 @@
 .hero-image {
   border: 1px solid red;
   height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .button {
@@ -30,4 +32,16 @@
   &.burger-index {
     height: 75vh;
   }
+}
+
+
+.user-image {
+  border: 2px grey solid;
+  border-radius: 30%;
+  height: 160px;
+  width: 160px;
+}
+
+.show-map {
+  height: 400px;
 }
