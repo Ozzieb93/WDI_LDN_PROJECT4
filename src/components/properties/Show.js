@@ -30,8 +30,6 @@ class Show extends React.Component {
               {property.location &&
                 <Map className="show-map" center={property.location}/>
               }
-              <div>
-              </div>
             </div>
           </div>
           {property.tenants &&
@@ -41,16 +39,21 @@ class Show extends React.Component {
                 <div className="card card-show" key={tenant._id}>
                   <div className="columns is-flex">
                     <div className="column has-text-centered tenant-image">
-                      <img className="level-item user-image" src={tenant.image}/>
+                      <img className="hero-image level-item user-image" src={tenant.image}/>
                     </div>
                     <div className="column">
                       <p className="title is-3">{tenant.name}</p>
                       <p className="subtitle flat-occupies is-6">George Occupies flat {tenant.flat}</p>
                       <p id="prof" className="proff subtitle is-5">{tenant.name}</p>
-                      <p className="fa fa-envelope-o"></p>
+                      <div>
+                        <p className="fa fa-envelope-o "></p>
+                        <p className="fa fa-phone-square "></p>
+                      </div>
+
                     </div>
                     <div className="column">
                       <h1 className="has-text-centered subtitle is-4">{tenant.movedIn}</h1>
+                      <p></p>
                     </div>
                   </div>
                 </div>

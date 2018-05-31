@@ -4,8 +4,8 @@
 @import 'components/showProfile';
 @import 'components/navbar';
 @import 'components/base';
-
-
+@import 'components/profile';
+@import 'components/properties/index';
 
 
 .card-image {
@@ -22,7 +22,7 @@
 
 .hero-image {
   border: 1px solid red;
-  height: 400px;
+  // height: 400px;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -38,9 +38,4 @@
   &.burger-index {
     height: 75vh;
   }
-}
-
-
-.show-map {
-  height: 400px;
 }

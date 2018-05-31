@@ -3,4 +3,11 @@ body {
   background-color: #e6f9ff;
   // font-family: $bodytextfont;
   min-height: 100vh;
+  background-image: image("http://interfacelift.com/wallpaper/Dffee96e/01199_whitehouses_2560x1600.jpg");
+}
+//
+.home-page {
+    background-image: url("http://interfacelift.com/wallpaper/Dffee96e/01199_whitehouses_2560x1600.jpg"), url("http://interfacelift.com/wallpaper/Dffee96e/01199_whitehouses_2560x1600.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }

@@ -17,7 +17,7 @@
 }
 
 .user-image {
-  border: 0.1px grey solid;
+  border: 1.5px lightgrey solid;
   border-radius: 50%;
   height: 160px;
   width: 160px;
@@ -25,6 +25,11 @@
 }
 
 .fa-envelope-o {
+  font-size: 36px;
+  margin-right: 5px;
+}
+
+.fa-phone-square {
   font-size: 36px;
 }
 
@@ -34,4 +39,9 @@
 
 .flat-occupies {
   margin: 0;
+}
+
+
+.show-map {
+  height: 400px;
 }
