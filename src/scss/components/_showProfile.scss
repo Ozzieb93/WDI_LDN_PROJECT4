@@ -1,8 +1,37 @@
 .card-show {
-  border: solid red 1px;
-  margin-top: 10px;
+  border: 1px solid white;
+  margin-bottom: 10px;
 }
 
-.is-horizontal-center {
-  justify-content: center;
+
+.card-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+}
+
+.tenant-image {
+  display: flex;
+  align-items: center;
+}
+
+.user-image {
+  border: 0.1px grey solid;
+  border-radius: 50%;
+  height: 160px;
+  width: 160px;
+  align-items: center;
+}
+
+.fa-envelope-o {
+  font-size: 36px;
+}
+
+#prof {
+  margin-bottom: 0px;
+}
+
+.flat-occupies {
+  margin: 0;
 }

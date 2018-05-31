@@ -2,6 +2,11 @@
 
 @import 'components/notFound';
 @import 'components/showProfile';
+@import 'components/navbar';
+@import 'components/base';
+
+
+
 
 .card-image {
   background-position: center;
@@ -35,13 +40,6 @@
   }
 }
 
-
-.user-image {
-  border: 2px grey solid;
-  border-radius: 30%;
-  height: 160px;
-  width: 160px;
-}
 
 .show-map {
   height: 400px;
