@@ -18,7 +18,7 @@ class Map extends React.Component {
     this.marker = new google.maps.Marker({
       position: this.map.getCenter(),
       map: this.map,
-      label: ''
+      label: '🏡'
     });
   }
 

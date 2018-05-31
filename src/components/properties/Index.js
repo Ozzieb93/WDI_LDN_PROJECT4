@@ -23,7 +23,7 @@ class PropertyIndex extends  React.Component {
         const { property } = this.state;
 
         // console.log(user);
-        console.log(property);
+        // console.log(property);
 
         return(
           <div>

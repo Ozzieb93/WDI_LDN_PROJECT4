@@ -18,10 +18,10 @@ class Show extends React.Component {
     render() {
       const { property } = this.state;
       console.log(property.tenants);
-      console.log(property.location);
+      // console.log(property.location);
       return(
         <div>
-          <h1 className="title is-1">{property.address}</h1>
+          <h1 className="has-text-centered title is-1">{property.address}</h1>
           <div className="columns">
             <div className="column is-half">
               <div className="hero-image" style={{ backgroundImage: `url(${ property.image })` }} />
@@ -36,20 +36,23 @@ class Show extends React.Component {
           </div>
           {property.tenants &&
             <div>
-              <h5 className="subtitle is-5">Number of Tenants currently living at the property: {property.tenants.length}</h5>
+              <h5 className="has-text-centered subtitle is-5">Number of Tenants currently living at the property: {property.tenants.length}</h5>
               {property.tenants.map(tenant =>
-                <div className="columns" key={tenant._id}>
-                  <div className="column">
-                    <img className="user-image" src={tenant.image}/>
-                  </div>
-                  <div className="column">
-                    <h1 className="title is-1">{tenant.name}</h1>
-                  </div>
-                  <div className="column">
-                    <h1 className="title is-1">{tenant.flat}</h1>
-                  </div>
-                  <div className="column">
-                    <h1 className="subtitle is-1">{tenant.movedIn}</h1>
+                <div className="card card-show" key={tenant._id}>
+                  <div className="columns">
+                    <div className="column is-horizontal-center">
+                      <img className="user-image " src={tenant.image}/>
+                    </div>
+                    <div className="column">
+                      <h1 className="title is-1">{tenant.name}</h1>
+                      <h1 className="subtitle is-5">{tenant.name}</h1>
+                    </div>
+                    <div className="column">
+                      <h1 className="title is-1">{tenant.flat}</h1>
+                    </div>
+                    <div className="column">
+                      <h1 className="subtitle is-1">{tenant.movedIn}</h1>
+                    </div>
                   </div>
                 </div>
               )}

@@ -51,8 +51,8 @@ render() {
           {!Auth.isAuthenticated() && <Link to="/login" className="navbar-item">Login</Link>}
           {!Auth.isAuthenticated() && <Link to="/register" className="navbar-item">Register</Link>}
           {Auth.isAuthenticated() && <a onClick={this.handleLogout} className="navbar-item">Logout</a>}
-          {Auth.isAuthenticated() && <Link to={`/users/${this.state.user._id}`} className="navbar-item">Profile of {this.state.user.name}</Link>}
-          {Auth.isAuthenticated() && <Link to={'/properties'} className="navbar-item">Properties of {this.state.user.name}</Link>}
+          {Auth.isAuthenticated() && <Link to={`/users/${this.state.user._id}`} className="navbar-item">{this.state.user.name}'s Profile</Link>}
+          {Auth.isAuthenticated() && <Link to={'/properties'} className="navbar-item">{this.state.user.name}'s Properties</Link>}
         </div>
       </div>
     </nav>
