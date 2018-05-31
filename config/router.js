@@ -37,6 +37,10 @@ router.route('/users/:id')
   .put(secureRoute, users.update)
   .delete(users.delete);
 
+// Tennants Route
+// router.route('/tenant/:id')
+//   .get(tenant.show);
+
 router.post('/register', auth.register);
 router.post('/login', auth.login);
 

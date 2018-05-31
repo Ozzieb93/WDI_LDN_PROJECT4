@@ -11,6 +11,7 @@ import RegisterLogin from './components/auth/Register';
 import Profile from './components/profile/Profile';
 import UsersEdit from './components/profile/Edit';
 // import LandlordProfile from './components/profile/LandlordProfile';
+import TenantProfile from './components/profile/TenantShow';
 
 //Common
 import NotFound from './components/common/NotFound';
@@ -20,6 +21,7 @@ import SecureRoute from './components/common/SecureRoute';
 // Properties
 import PropertyIndex from './components/properties/Index';
 import PropertyShow from './components/properties/Show';
+import PropertyNew from './components/properties/New';
 
 //New Job
 // import JobNew from './components/job/New';
@@ -39,8 +41,10 @@ class App extends React.Component {
             <div className="container">
               <Switch>
                 <SecureRoute exact path="/users/:id" component={Profile} />
+                <SecureRoute exact path="/tenants/:id" component={TenantProfile} />
                 <SecureRoute path="/users/:id/edit" component={UsersEdit} />
-                <Route exact path="/properties" component={PropertyIndex} />
+                <Route exact path="/properties/" component={PropertyIndex} />
+                <Route exact path="/properties/new" component={PropertyNew} />
                 <Route exact path="/property/:id" component={PropertyShow} />
                 <Route exact path="/login" component={AuthLogin} />
                 <Route exact path="/register" component= {RegisterLogin} />

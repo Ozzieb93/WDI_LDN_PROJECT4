@@ -24,7 +24,7 @@ class Show extends React.Component {
           <h1 className="has-text-centered title is-1">{property.address}</h1>
           <div className="columns">
             <div className="column is-half">
-              <div className="hero-image" style={{ backgroundImage: `url(${ property.image })` }} />
+              <div className="{property.tenants &&" style={{ backgroundImage: `url(${ property.image })` }} />
             </div>
             <div className="column is-half">
               {property.location &&
@@ -43,16 +43,22 @@ class Show extends React.Component {
                     </div>
                     <div className="column">
                       <p className="title is-3">{tenant.name}</p>
-                      <p className="subtitle flat-occupies is-6">George Occupies flat {tenant.flat}</p>
-                      <p id="prof" className="proff subtitle is-5">{tenant.name}</p>
+                      <p className="subtitle flat-occupies is-6">{tenant.name} Occupies flat {tenant.flat}</p>
+                      <p id="prof" className="proff subtitle is-5">{tenant.proffession}</p>
                       <div>
                         <p className="fa fa-envelope-o "></p>
                         <p className="fa fa-phone-square "></p>
                       </div>
-
                     </div>
-                    <div className="column">
-                      <h1 className="has-text-centered subtitle is-4">{tenant.movedIn}</h1>
+                    <div  className="column ">
+                      <h1 className="has-text-centered subtitle is-4">Date Moved In</h1>
+                      <h1 className="has-text-centered subtitle is-6">{tenant.movedIn}</h1>
+                      <div id="columns">
+                        <div id="column level">
+                          <button id="show-page-tenant" className="button is-small level-left show-page-tenant is-success">Show {tenant.name}</button>
+                          <button className="button is-small  level-right is-danger show-page-tenant is-success">Remove {tenant.name}</button>
+                        </div>
+                      </div>
                       <p></p>
                     </div>
                   </div>

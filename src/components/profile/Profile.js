@@ -29,19 +29,19 @@ class Profile extends React.Component {
               <h2 className="subtitle is-2">{user.address}</h2>
               <p>{user.description}</p>
               <p>{user.bio}</p>
+              <div>
+                <Link
+                  to={'/properties'}
+                  className="button is-success"
+                >Show properties for {user.name}</Link>
+              </div>
             </div>
           </div>
           <div>
-            <Link
-              to={'/properties'}
-              className="button is-success"
-            >Show properties for {user.name}</Link>
-          </div>
-          <div>
-            <Link
+            {/* <Link
               to={`/users/${user._id}/edit`}
               className="button is-success"
-            >Edit {user.name} Profile</Link>
+            >Edit {user.name} Profile</Link> */}
           </div>
         </section>
       );
@@ -49,5 +49,3 @@ class Profile extends React.Component {
 }
 
 export default Profile;
-
-// Should this be a classical or functional component?

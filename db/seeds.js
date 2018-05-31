@@ -25,7 +25,7 @@ mongoose.connect(dbURI, (err, db) => {
           email: 'b@b',
           password: 'b',
           passwordConfirmation: 'b',
-          proffession: 'Accountant',
+          profession: 'Accountant',
           address: '5 wickham court road',
           flat: 1,
           movedIn: '1st Jan, 2018'
@@ -35,7 +35,7 @@ mongoose.connect(dbURI, (err, db) => {
           email: 'b@b',
           password: 'b',
           passwordConfirmation: 'b',
-          proffession: 'Lawyer',
+          profession: 'Lawyer',
           address: '5 wickham court road',
           flat: 2,
           movedIn: '20th Dec, 2018'
@@ -45,7 +45,7 @@ mongoose.connect(dbURI, (err, db) => {
           email: 'b@b',
           password: 'b',
           passwordConfirmation: 'b',
-          proffession: 'Retail Assistant',
+          profession: 'Retail Assistant',
           address: '5 wickham court road',
           flat: 3,
           movedIn: '18th March, 2018'
@@ -55,16 +55,16 @@ mongoose.connect(dbURI, (err, db) => {
           email: 'b@b',
           password: 'b',
           passwordConfirmation: 'b',
-          proffession: 'HR Officer',
+          profession: 'HR Officer',
           address: '5 wickham court road',
           flat: 4,
           movedIn: '18th March, 2018'
         } ,{
-          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYMU9u6oaDXJZzqxq9TtbL9ga489PhUbUU9_U_aOj2rGJfHg1o',
+          image: 'https://static1.squarespace.com/static/53b599ebe4b08a2784696956/53c987b9e4b02a3a05287045/573e5642ab48dee8fdd818bc/1463704281105/professional-headshots-73.jpg',
           name: 'Jill',
           email: 'b@b',
           password: 'b',
-          proffession: 'Events Worker',
+          profession: 'Events Worker',
           passwordConfirmation: 'b',
           address: '5 wickham court road',
           flat: 5,
@@ -74,7 +74,7 @@ mongoose.connect(dbURI, (err, db) => {
           name: 'Aiden',
           email: 'b@b',
           password: 'b',
-          proffession: 'CEO',
+          profession: 'CEO',
           passwordConfirmation: 'b',
           address: '5 wickham court road',
           flat: 6,
@@ -85,7 +85,7 @@ mongoose.connect(dbURI, (err, db) => {
           email: 'b@b',
           password: 'b',
           passwordConfirmation: 'b',
-          proffession: 'Senior Web Developer',
+          profession: 'Senior Web Developer',
           address: '5 wickham court road',
           flat: 7,
           movedIn: '6th Feb, 2018'
@@ -95,7 +95,7 @@ mongoose.connect(dbURI, (err, db) => {
           email: 'b@b',
           password: 'b',
           passwordConfirmation: 'b',
-          proffession: 'Junior Web Developer',
+          profession: 'Junior Web Developer',
           address: '5 wickham court road',
           flat: 8,
           movedIn: '17th Mar, 2018'
@@ -105,7 +105,7 @@ mongoose.connect(dbURI, (err, db) => {
           email: 'b@b',
           password: 'b',
           passwordConfirmation: 'b',
-          proffession: 'PR Consultant',
+          profession: 'PR Consultant',
           address: '5 wickham court road', // --<<
           flat: 1,
           movedIn: '8th November, 2017'
@@ -115,7 +115,7 @@ mongoose.connect(dbURI, (err, db) => {
           email: 'b@b',
           password: 'b',
           passwordConfirmation: 'b',
-          proffession: 'Plumber',
+          profession: 'Plumber',
           address: '5 wickham court road',
           flat: 2,
           movedIn: '8th May, 2018'
@@ -125,7 +125,7 @@ mongoose.connect(dbURI, (err, db) => {
           email: 'b@b',
           password: 'b',
           passwordConfirmation: 'b',
-          proffession: 'iOS Developer',
+          profession: 'iOS Developer',
           address: '5 wickham court road',
           flat: 3,
           movedIn: '18th Jan, 2018'
@@ -135,7 +135,7 @@ mongoose.connect(dbURI, (err, db) => {
           email: 'b@b',
           password: 'b',
           passwordConfirmation: 'b',
-          proffession: 'Actor',
+          profession: 'Actor',
           address: '5 wickham court road',
           flat: 4,
           movedIn: '24th Oct, 2018'
@@ -145,7 +145,7 @@ mongoose.connect(dbURI, (err, db) => {
           email: 'b@b',
           password: 'b',
           passwordConfirmation: 'b',
-          proffession: 'Pharmacist',
+          profession: 'Pharmacist',
           address: '5 wickham court road',
           flat: 5,
           movedIn: '23rd Apr, 2018'
@@ -155,7 +155,7 @@ mongoose.connect(dbURI, (err, db) => {
           email: 'b@b',
           password: 'b',
           passwordConfirmation: 'b',
-          proffession: 'B&Q Manager',
+          profession: 'B&Q Manager',
           address: '5 wickham court road',
           flat: 6,
           movedIn: '13th Jan, 2018'
@@ -165,7 +165,7 @@ mongoose.connect(dbURI, (err, db) => {
           email: 'b@b',
           password: 'b',
           passwordConfirmation: 'b',
-          proffession: 'Chef',
+          profession: 'Chef',
           address: '5 wickham court road',
           flat: 7,
           movedIn: '9th Oct, 2017'

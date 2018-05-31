@@ -37,10 +37,9 @@ class UsersEdit extends React.Component {
     return (
       <div>
         <h1>
-          hello
         </h1>
       </div>
-    )
+    );
   }
 }
 

@@ -23,14 +23,12 @@ class PropertyIndex extends  React.Component {
         const { property } = this.state;
 
         // console.log(user);
-
-
         return(
           <div>
             <h1 className="title is-1">{user.name}'s Properties </h1>
             <div className="columns">
               <div className="column">
-                <img className="profile-image" src={user.image} />
+                <img className="hero-image profile-image" src={user.image} />
               </div>
               <ul>
                 {property.map(property =>
@@ -42,16 +40,11 @@ class PropertyIndex extends  React.Component {
                   </li>
                 )}
               </ul>
-              {/* <ul>
-                <div className="column">
-                  {property.map(property =>
-                    <li key={property._id}> <hr />
-
-                    </li>
-                  )}
-                </div>
-              </ul> */}
             </div>
+            <Link
+              to={'/properties/new'}
+              className="button is-success"
+            >Add a new property </Link>
           </div>
         );
       }
