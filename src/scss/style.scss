@@ -1,12 +1,17 @@
 @import '~bulma';
 
+//Profiles
 @import 'components/profile/show';
+@import 'components/profile/profile';
+
+//Common Components
 @import 'components/common/notFound';
 @import 'components/common/navbar';
-
 @import 'components/common/base';
 
+//Properties Index
 @import 'components/properties/index';
+
 
 .card-image {
   background-position: center;
@@ -23,12 +28,12 @@
 .button {
   margin: 3px;
 }
-
-.map {
-  height: 260px;
-  margin-bottom:  22px;
-
-  &.burger-index {
-    height: 75vh;
-  }
-}
+// 
+// .map {
+//   height: 260px;
+//   margin-bottom:  22px;
+//
+//   &.burger-index {
+//     height: 75vh;
+//   }
+// }

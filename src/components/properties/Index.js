@@ -28,19 +28,23 @@ class PropertyIndex extends  React.Component {
             <h1 className="title is-1">{user.name}'s Properties </h1>
             <div className="columns">
               <div className="column">
-                <img className="hero-image profile-image" src={user.image} />
+                <img className="hero-image has-text-centered profile-image" src={user.image} />
               </div>
-              <ul>
+              <div className="column">
                 {property.map(property =>
-                  <li key={property._id}> <hr />
-                    {property.address} <Link
+                  <div key={property._id}>
+                    <h1 className="title is-3">{property.address}</h1>
+                    <div>
+                    </div>
+                    <Link
                       to={`/property/${property._id}`}
-                      className="button is-success"
+                      className="button is-success is-small"
                     >More details about the property</Link>
-                  </li>
+                  </div>
                 )}
-              </ul>
+              </div>
             </div>
+
             <Link
               to={'/properties/new'}
               className="button is-success"

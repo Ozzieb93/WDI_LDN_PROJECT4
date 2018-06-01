@@ -14,16 +14,18 @@ class Show extends React.Component {
     componentDidMount() {
       // console.log(this.props.match.params.id);
       // console.log(this.props);
-      axios.get(`/api/properties/${this.props.match.params.id}`)
+      axios
+        .get(`/api/properties/${this.props.match.params.id}`)
         .then(res => this.setState({ property: res.data }));
-      axios.get('/api/users/')
+      axios
+        .get('/api/users/')
         .then(res => this.setState({ users: res.data }));
     }
 
-    delete = () => {
+    handleTenantDelete = tenant => {
       console.log('Delete', this.users);
       axios
-        .delete(`/api/users/${this.props.match.params.id}`, {
+        .delete(`/api/users/${tenant._id}`, {
           headers: { Authorization: `Bearer ${Auth.getToken()}`}
         })
         .then(() => this.props.history.push('/'));
@@ -73,7 +75,7 @@ class Show extends React.Component {
                       <div id="columns">
                         <div id="column level">
                           <button id="show-page-tenant" className="button is-small show-page-tenant is-success">Show {tenant.name}</button>
-                          <button onClick={this.delete} className="button is-small  is-danger show-page-tenant">Remove {tenant.name}</button>
+                          <button onClick={() => this.handleTenantDelete(tenant)} className="button is-small  is-danger show-page-tenant">Remove {tenant.name}</button>
                         </div>
                       </div>
                       <p></p>

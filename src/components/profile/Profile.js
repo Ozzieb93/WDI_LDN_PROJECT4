@@ -29,7 +29,7 @@ class Profile extends React.Component {
               <h2 className="subtitle is-4">{user.address}</h2>
               <p>{user.description}</p>
               <p>{user.bio}</p>
-              <div className="column">
+              <div className="show-property-button">
                 <Link
                   to={'/properties'}
                   className="button is-success"
