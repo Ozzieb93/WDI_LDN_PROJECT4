@@ -45,11 +45,6 @@ class UsersEdit extends React.Component {
 
 export default UsersEdit;
 
-// Name
-// Address
-// Description
-// Image
-
 //   <UserForm
 //   user={this.state}
 //   handleChange={this.handleChange}

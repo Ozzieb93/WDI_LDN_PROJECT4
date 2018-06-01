@@ -54,10 +54,13 @@ class Show extends React.Component {
           {property.tenants &&
             <div>
               <h5 className="has-text-centered subtitle is-5">Number of Tenants currently living at the property: {property.tenants.length}</h5>
+              <div className="center">
+                <button className="button is-success is-small">Add a Tenant</button>
+              </div>
               {property.tenants.map(tenant =>
                 <div className="card card-show" key={tenant._id}>
                   <div className="columns is-centered">
-                    <div className="column tenant-image">
+                    <div className="column tenant-image center">
                       <img className="hero-image level-item user-image" src={tenant.image}/>
                     </div>
                     <div className="column">
@@ -73,7 +76,7 @@ class Show extends React.Component {
                       <h1 className="has-text-centered subtitle is-4">Date Moved In</h1>
                       <h1 className="has-text-centered subtitle is-6">{tenant.movedIn}</h1>
                       <div id="columns">
-                        <div id="column level">
+                        <div id="column" className="center">
                           <button id="show-page-tenant" className="button is-small show-page-tenant is-success">Show {tenant.name}</button>
                           <button onClick={() => this.handleTenantDelete(tenant)} className="button is-small  is-danger show-page-tenant">Remove {tenant.name}</button>
                         </div>
@@ -91,10 +94,3 @@ class Show extends React.Component {
 }
 
 export default Show;
-//
-{/* <div className="columns">
-
-
-
-
-</div> */}

@@ -21,21 +21,25 @@ componentWillUpdate() {
 
 componentDidMount() {
   Auth.isAuthenticated() && axios.get(`/api/users/${Auth.getPayload().sub}`)
-    .then(res => this.setState({ user: res.data }));
+    .then(res => this.setState({ user: res.data }, () => {
+      console.log('this is the state ->', this.state);
+    }));
 }
 
 
 handleLogout = () => {
   Auth.logout();
+  this.setState({ user: {} });
   this.props.history.push('/');
 }
 
 render() {
+  console.log(this.state.user);
   return(
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <Link className="navbar-item" to="/">
-          <img src="https://pngimg.com/uploads/house/house_PNG63.png"/>
+          <img src="/assets/logo.png"/>
           {/* <p> 🏚 </p> */}
         </Link>
         <a role="button" className={`navbar-burger ${this.state.navIsOpen? 'is-active' : ''}`} onClick={this.handleToggle}>
@@ -52,7 +56,8 @@ render() {
           {!Auth.isAuthenticated() && <Link to="/register" className="navbar-item">Register</Link>}
           {Auth.isAuthenticated() && <a onClick={this.handleLogout} className="navbar-item">Logout</a>}
           {Auth.isAuthenticated() && <Link to={`/users/${this.state.user._id}`} className="navbar-item">{this.state.user.name}'s Profile</Link>}
-          {Auth.isAuthenticated() && <Link to={'/properties'} className="navbar-item">{this.state.user.name}'s Properties</Link>}
+          {(this.state.user.role === 'Landlord' ) &&
+          Auth.isAuthenticated() && <Link to={'/properties'} className="navbar-item">{this.state.user.name}'s Properties</Link>}
         </div>
       </div>
     </nav>

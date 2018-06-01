@@ -4,7 +4,8 @@ const Home = () => {
   return (
     <div className="">
       <div className="column">
-        <h1 className="title is-1">PropManage</h1>
+        <img className="home-logo" src="assets/logo.png" />
+        <h1 className="title is-1">PropManage </h1>
         <h1 className="subtitle is-5">What is PropManage?</h1>
       </div>
       <div className="column">

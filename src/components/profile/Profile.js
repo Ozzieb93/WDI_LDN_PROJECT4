@@ -10,16 +10,17 @@ class Profile extends React.Component {
     }
 
     componentDidMount() {
-      axios.get(`/api/users/${Auth.getPayload().sub}`)
+      axios
+        .get(`/api/users/${Auth.getPayload().sub}`)
         .then(res => this.setState({ user: res.data }));
     }
 
     render() {
       const { user } = this.state;
-      console.log(user);
+      // console.log(user);
       return(
         <section>
-          <h1 className="title is-2">Profile</h1>
+          <h1 className="title is-2">{user.name}'s Profile</h1>
           <div className="columns">
             <div className="column">
               <div className="hero-image profile-picture" style={{ backgroundImage: `url(${ user.image })` }} />
@@ -30,10 +31,15 @@ class Profile extends React.Component {
               <p>{user.description}</p>
               <p>{user.bio}</p>
               <div className="show-property-button">
-                <Link
+                {this.state.user.role === 'Landlord' && <Link
                   to={'/properties'}
                   className="button is-success"
-                >Show properties for {user.name}</Link>
+                >Show properties for {user.name}</Link>}
+                {this.state.user.role === 'Tenant' &&
+                <Link
+                  to={'/'}
+                  className="button is-success"
+                >Maintainance Request</Link>}
               </div>
             </div>
           </div>
