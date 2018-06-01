@@ -1,30 +1,47 @@
 import React from 'react';
 import axios from 'axios';
-// import Auth from '../../lib/Auth';
+import Auth from '../../lib/Auth';
 // import { Link } from 'react-router-dom';
 import Map from '../common/Map';
 
 class Show extends React.Component {
 
     state = {
-      property: {}
+      property: {},
+      users: {}
     }
 
     componentDidMount() {
+      // console.log(this.props.match.params.id);
+      // console.log(this.props);
       axios.get(`/api/properties/${this.props.match.params.id}`)
         .then(res => this.setState({ property: res.data }));
+      axios.get('/api/users/')
+        .then(res => this.setState({ users: res.data }));
     }
+
+    delete = () => {
+      console.log('Delete', this.users);
+      axios
+        .delete(`/api/users/${this.props.match.params.id}`, {
+          headers: { Authorization: `Bearer ${Auth.getToken()}`}
+        })
+        .then(() => this.props.history.push('/'));
+    }
+
 
     render() {
       const { property } = this.state;
-      console.log(property.tenants);
+      // console.log(property.tenants);
       // console.log(property.location);
+      const { user } = this.state;
+      console.log(user);
       return(
         <div>
           <h1 className="has-text-centered title is-1">{property.address}</h1>
           <div className="columns">
             <div className="column is-half">
-              <div className="{property.tenants &&" style={{ backgroundImage: `url(${ property.image })` }} />
+              <div className="hero-image property-show-image" style={{ backgroundImage: `url(${ property.image })` }} />
             </div>
             <div className="column is-half">
               {property.location &&
@@ -55,8 +72,8 @@ class Show extends React.Component {
                       <h1 className="has-text-centered subtitle is-6">{tenant.movedIn}</h1>
                       <div id="columns">
                         <div id="column level">
-                          <button id="show-page-tenant" className="button is-small level-left show-page-tenant is-success">Show {tenant.name}</button>
-                          <button className="button is-small  level-right is-danger show-page-tenant is-success">Remove {tenant.name}</button>
+                          <button id="show-page-tenant" className="button is-small show-page-tenant is-success">Show {tenant.name}</button>
+                          <button onClick={this.delete} className="button is-small  is-danger show-page-tenant">Remove {tenant.name}</button>
                         </div>
                       </div>
                       <p></p>

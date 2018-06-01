@@ -30,7 +30,7 @@ router.route('/properties/:id')
 // USERS Route
 
 router.route('/users')
-  .get(secureRoute, users.index);
+  .get( users.index);
 
 router.route('/users/:id')
   .get(users.show)

@@ -184,7 +184,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.078197
           }
         } ,{
-          address: '98 Dynevour Road',
+          address: '98 Dynevour Road, London, N16 5DG',
           image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTsF52cBB_D0Dvga_JyFkK447NbSeHMzr2m7vrrE8yBMfvW0fILQ',
           tenants: [users[8], users[9], users[10], users[11], users[12], users[13], users[14]],
           location: {

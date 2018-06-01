@@ -16,20 +16,20 @@ class Profile extends React.Component {
 
     render() {
       const { user } = this.state;
-      // console.log(user);
+      console.log(user);
       return(
         <section>
+          <h1 className="title is-2">Profile</h1>
           <div className="columns">
             <div className="column">
-              <h1>Profile</h1>
-              <div className="hero-image" style={{ backgroundImage: `url(${ user.image })` }} />
+              <div className="hero-image profile-picture" style={{ backgroundImage: `url(${ user.image })` }} />
             </div>
             <div className="column">
-              <h1 className="title is-1">{user.name}</h1>
-              <h2 className="subtitle is-2">{user.address}</h2>
+              <h1 className="title is-3">{user.name}</h1>
+              <h2 className="subtitle is-4">{user.address}</h2>
               <p>{user.description}</p>
               <p>{user.bio}</p>
-              <div>
+              <div className="column">
                 <Link
                   to={'/properties'}
                   className="button is-success"

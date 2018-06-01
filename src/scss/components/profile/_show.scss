@@ -2,7 +2,12 @@
   border: 1px solid white;
   margin-bottom: 10px;
 }
-
+.profile-picture{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+}
 
 .card-image {
   background-position: center;
@@ -41,14 +46,21 @@
   margin: 0;
 }
 
+.property-show-image{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  // border: solid 1px red;
+}
 
 .show-map {
-  height: 400px;
+  height: 800px;
 }
 
 #column5 {
   display: flex;
-  
+
 }
 
 #show-page-tenant {
