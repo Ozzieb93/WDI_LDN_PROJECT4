@@ -56,8 +56,8 @@ class Show extends React.Component {
               <h5 className="has-text-centered subtitle is-5">Number of Tenants currently living at the property: {property.tenants.length}</h5>
               {property.tenants.map(tenant =>
                 <div className="card card-show" key={tenant._id}>
-                  <div className="columns is-flex">
-                    <div className="column has-text-centered tenant-image">
+                  <div className="columns is-centered">
+                    <div className="column tenant-image">
                       <img className="hero-image level-item user-image" src={tenant.image}/>
                     </div>
                     <div className="column">
