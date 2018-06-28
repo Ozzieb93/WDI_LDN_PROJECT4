@@ -37,7 +37,7 @@ render() {
   console.log(this.state.user);
   return(
     <nav className="navbar" role="navigation" aria-label="main navigation">
-      <div className="navbar-brand">
+      <div className="navbar-brand ">
         <Link className="navbar-item" to="/">
           <img src="/assets/logo.png"/>
           {/* <p> 🏚 </p> */}
@@ -50,14 +50,15 @@ render() {
       </div>
 
       <div className={`navbar-menu ${this.state.navIsOpen ? 'is-active' : ''}`}>
-        <div className="navbar-end">
-          <Link to="/" className="navbar-item">🏚</Link>
+        <div className="navbar-start">
           {!Auth.isAuthenticated() && <Link to="/login" className="navbar-item">Login</Link>}
           {!Auth.isAuthenticated() && <Link to="/register" className="navbar-item">Register</Link>}
-          {Auth.isAuthenticated() && <a onClick={this.handleLogout} className="navbar-item">Logout</a>}
-          {Auth.isAuthenticated() && <Link to={`/users/${this.state.user._id}`} className="navbar-item">{this.state.user.name}'s Profile</Link>}
           {(this.state.user.role === 'Landlord' ) &&
           Auth.isAuthenticated() && <Link to={'/properties'} className="navbar-item">{this.state.user.name}'s Properties</Link>}
+          {Auth.isAuthenticated() && <Link to={`/users/${this.state.user._id}`} className="navbar-item">{this.state.user.name}'s Profile</Link>}
+        </div>
+        <div className="navbar-end">
+          {Auth.isAuthenticated() && <a onClick={this.handleLogout} className="navbar-item">Logout</a>}
         </div>
       </div>
     </nav>
