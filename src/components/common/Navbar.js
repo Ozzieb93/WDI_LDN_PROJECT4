@@ -56,6 +56,7 @@ render() {
           {(this.state.user.role === 'Landlord' ) &&
           Auth.isAuthenticated() && <Link to={'/properties'} className="navbar-item">{this.state.user.name}'s Properties</Link>}
           {Auth.isAuthenticated() && <Link to={`/users/${this.state.user._id}`} className="navbar-item">{this.state.user.name}'s Profile</Link>}
+          {/* Making an axios request would not refresh the navbar. This is why the navbar doesnt update with the name of the current user untill after a refresh */}
         </div>
         <div className="navbar-end">
           {Auth.isAuthenticated() && <a onClick={this.handleLogout} className="navbar-item">Logout</a>}
