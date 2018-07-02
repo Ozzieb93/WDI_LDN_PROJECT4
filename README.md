@@ -1,4 +1,4 @@
-regarding# PropManage
+# PropManage
 
 You can find a link to PropManage below:
 
@@ -47,7 +47,7 @@ I employed the following technologies to make my MERN stack app:
 
 * Implement a card payment system using a 3rd party API. This is so tenants are able to pay any upcoming bills directly to the landlord.
 
-* Notification system where tenants would be notified via email or phone reagrding any maintenance or repairs happening in the house.
+* Notification system where tenants would be notified via email or phone regarding any maintenance or repairs happening in the house.
 
 * Include filesatck so users (both landlord and tenant) can update their profiles using images on their machines.
 
