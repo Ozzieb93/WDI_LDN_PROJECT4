@@ -52,3 +52,5 @@ I employed the following technologies to make my MERN stack app:
 * Include filesatck so users (both landlord and tenant) can update their profiles using images on their machines.
 
 * Having an OAuth feature that allows both types of users to quickly sign up would be a a major benefit.
+
+* A better designed webpage to enhance the user experience. 
