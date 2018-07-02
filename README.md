@@ -1,4 +1,4 @@
-communicated##PropManage
+## PropManage
 
 You can find a link to PropManage below:
 
@@ -7,40 +7,39 @@ https://oz-prop-manage.herokuapp.com/
 My goal for this project was to create a fully functional MERN stack app in 7 days.
 
 
-##Inspiration
+## Inspiration
 
 Working in the property management industry, I gained an insight into how landlords and tenants effectively communicated with one another. I noticed a lack of effective communication between both parties which resulted in an unfavourable strain on the relationship. Basic communication about outstanding bills, maintenance and complaints were not effectively communicated. PropManage aim is to reinvigorate that bond and change the stigma of unreliable landlords and tricky tenants.
 
-
-##What to improve
+## What to improve
 
 HERE
 
-##Screenshots
+## Screenshots
 
 
 
-##Technologies
+## Technologies
 
 I employed the following technologies to make my MERN stack app:
 
-###Languages:
+### Languages:
 HTML5
 SCSS
 JavaScript
 
-###Front-end Web Application Framework:
+### Front-end Web Application Framework:
 React
 
-###CSS Framework:
+### CSS Framework:
 Bulma
 
-###REST client:
+### REST client:
 Insomnia
 
-###APIs:
+### APIs:
 Google Maps
 
-###Typefaces:
+### Typefaces:
 Google Fonts
 Atom
