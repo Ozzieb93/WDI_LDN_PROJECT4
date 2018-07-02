@@ -1,4 +1,7 @@
-# PropManage
+![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
+
+
+# Project 4: PropManage
 
 You can find a link to PropManage below:
 
@@ -53,4 +56,4 @@ I employed the following technologies to make my MERN stack app:
 
 * Having an OAuth feature that allows both types of users to quickly sign up would be a a major benefit.
 
-* A better designed webpage to enhance the user experience. 
+* A better designed webpage to enhance the user experience.
